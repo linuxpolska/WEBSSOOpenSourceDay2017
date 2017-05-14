@@ -36,9 +36,9 @@ operacyjnego z jakiego korzysta użytownik.
 
 Po zainstalowaniu składników należy dokonać sklonowania repozytorium git
 poprzez wydanie komendy:
-'''sh
+```sh
 git clone --bare https://github.com/linuxpolska/WEBSSOOpenSourceDay2017.git
-'''
+```
 
 Po zakończeniu klonowania należy wejść do katalogu przechowującego lokalnie
 sklonowane repozytorium i dokonać instalacji niezbędnych wtyczek systemu VAGRANT
