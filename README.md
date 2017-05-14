@@ -65,7 +65,7 @@ powinny zbudować środowisko poprzez wydanie komend:
 vagrant 389ds.websso.linuxpolska.pl cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
 ```
 Po zakończeniu budowy środowiska 3 pierwszych maszyn należy zamknąć 2 z nich
-i dokonaćzbudowania pozostałych maszyn wydając komendy:
+i dokonać zbudowania pozostałych maszyn wydając komendy:
 (potwierdzając komendy poprzez Y):
 ```sh
 vagrant halt cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
@@ -88,10 +88,12 @@ do optymalizacji środowisak pracy poprzez zwiększenie parametrów pracy system
 Optymalizacji należy doknać przed wstępną konfiguracją środowiska.  
 W tym celu po sklonowaniu śrowiska pracy systemu należy poddać edycji plik
 node.json i dwukrotnie zwiększyć parametr: ":memory":  dla wszystkich maszyn
-wirtualnych.
+wirtualnych:
+sh```
 np.: z 512 do 1024
+```
 Zapewni to szybszą pracę całości środiwska (szybrszą inicjalizację aplikacji).
-Jeśli optymalizacji dokonano po wstępnym zbudowaniu środowia (wydaniu komendy vagrant up)
+Jeśli optymalizacji dokonano po wstępnym zbudowaniu środowiska (wydaniu komendy vagrant up)
 można dokonać ponownej budowy środowiska poprzez wydanie komendy:
 ```sh
 vagrant destroy
