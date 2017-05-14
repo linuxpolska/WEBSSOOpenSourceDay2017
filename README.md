@@ -57,7 +57,10 @@ Twój komputer posiada nie mniej niż 8GB ram zbuduj i wstępnie skonfiguruj
 vagrant up
 ```
 Spowoduje to wstępną konfigurację środowiska dla wszystkich maszyn wirtualnych.
-
+Podczas budowania środowiska możesz zosać zapytany o hasło lokalnego lub
+administracyjnego użytkownika celem dopisania nazw instalowanych hostów do
+lokalnego systemu wyszukiwania nazw (np. pliku /etc/hosts). W takim przypadku
+wprowadź wymagane hasło.
 Osoby wyposażone w komputery o ilości pamięci RAM nie przekraczającej 8GB
 powinny zbudować środowisko poprzez wydanie komend:
 ```sh
