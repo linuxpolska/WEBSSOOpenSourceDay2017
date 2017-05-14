@@ -68,7 +68,7 @@ done
 
 : Generate certificates
 if [ ! -f /vagrant/tmp/appcas.crt ] || [ ! -f /vagrant/tmp/appcas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh appcas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh appcas.websso.linuxpolska.pl
 fi
 cp /vagrant/tmp/appcas.key /etc/pki/tls/private
 chmod 600 /etc/pki/tls/private/appcas.key

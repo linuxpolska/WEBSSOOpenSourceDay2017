@@ -68,7 +68,7 @@ done
 
 : Generate certificates
 if [ ! -f /vagrant/tmp/appkeycloak.crt ] || [ ! -f /vagrant/tmp/appkeycloak.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh appkeycloak.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh appkeycloak.websso.linuxpolska.pl
 fi
 cp /vagrant/tmp/appkeycloak.key /etc/pki/tls/private
 chmod 600 /etc/pki/tls/private/appkeycloak.key
@@ -233,7 +233,7 @@ PORTALINIT
 
 : Make keycloak certifcate trusted by java vm
 if [ ! -f /vagrant/tmp/keycloak.crt ] || [ ! -f /vagrant/tmp/keycloak.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh keycloak.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh keycloak.websso.linuxpolska.pl
 fi
 [ -f /vagrant/tmp/keycloak.crt ] && keytool -import -alias keycloak -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/keycloak.crt -storepass changeit -noprompt
 

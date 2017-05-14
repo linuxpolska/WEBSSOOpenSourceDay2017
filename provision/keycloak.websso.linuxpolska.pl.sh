@@ -289,11 +289,11 @@ sed -i '/<\/periodic-rotating-file-handler>/a\
 
 : Make sure all certificates will be trusted by java vm running keycloak
 if [ ! -f /vagrant/tmp/apachekeycloak.crt ] || [ ! -f /vagrant/tmp/apachekeycloak.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh apachekeycloak.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh apachekeycloak.websso.linuxpolska.pl
 fi
 keytool -import -alias apachekeycloak -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/apachekeycloak.crt -storepass changeit -noprompt
 if [ ! -f /vagrant/tmp/appkeycloak.crt ] || [ ! -f /vagrant/tmp/appkeycloak.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh appkeycloak.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh appkeycloak.websso.linuxpolska.pl
 fi
 keytool -import -alias appkeycloak -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/appkeycloak.crt -storepass changeit -noprompt
 if [ ! -f /vagrant/tmp/ldap.crt ] || [ ! -f /vagrant/tmp/ldap.key ] ; then
@@ -302,7 +302,7 @@ fi
 keytool -import -alias ldap -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/ldap.crt -storepass changeit -noprompt
 
 if [ ! -f /vagrant/tmp/cas.crt ] || [ ! -f /vagrant/tmp/cas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh cas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh cas.websso.linuxpolska.pl
 fi
 keytool -import -alias cas -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/cas.crt -storepass changeit -noprompt
 

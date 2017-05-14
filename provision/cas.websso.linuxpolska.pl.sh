@@ -23,7 +23,7 @@ yum -y install httpd mod_ssl
 
 : Generate certificates
 if [ ! -f /vagrant/tmp/cas.crt ] || [ ! -f /vagrant/tmp/cas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh cas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh cas.websso.linuxpolska.pl
 fi
 
 cp /vagrant/tmp/cas.key /etc/pki/tls/private
@@ -184,12 +184,12 @@ fi
 keytool -import -alias ldap -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/ldap.crt -storepass changeit -noprompt
 
 if [ ! -f /vagrant/tmp/apachecas.crt ] || [ ! -f /vagrant/tmp/apachecas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh apachecas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh apachecas.websso.linuxpolska.pl
 fi
 keytool -import -alias apachecas -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/apachecas.crt -storepass changeit -noprompt
 
 if [ ! -f /vagrant/tmp/appcas.crt ] || [ ! -f /vagrant/tmp/appcas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh appcas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh appcas.websso.linuxpolska.pl
 fi
 keytool -import -alias appcas -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/appcas.crt -storepass changeit -noprompt
 
