@@ -65,7 +65,7 @@ powinny zbudować środowisko poprzez wydanie komend:
 vagrant 389ds.websso.linuxpolska.pl cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
 ```
 Po zakończeniu budowy środowiska 3 pierwszych maszyn należy zamknąć 2 z nich
-i dokonaćzbudowania pozostałych maszyn wydając komendy
+i dokonaćzbudowania pozostałych maszyn wydając komendy:
 (potwierdzając komendy poprzez Y):
 ```sh
 vagrant halt cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
@@ -74,6 +74,12 @@ vagrant up keycloak.websso.linuxpolska.pl appkeycloak.websso.linuxpolska.pl
 
 Należy pamiętać, że uruchomienie środowiska po jego uprzednim zbudowaniu
 zajmie znacząco mniej czasu.
+
+##### Scenariusze sukcesu
+
+Potwierdzono pełną poprawną instlację środowiska w następującyh systemach:
+* Fedora Linux 25:, Vagrant: 1.8.5, VirtualBox 5.1.22
+* Gentoo Linux Base System Relaease 2.3, Vagrant 1.9.3, VirtualBox 5.1.22
 
 #### Optymalizacja pracy środowiska
 
@@ -94,18 +100,18 @@ vagrant up
 
 #### Składniki środowiska
 W trakcie budowania środowiska pobrane zostaną wszystkie jego znaczące składniki.
-Elementy te zostaną zapisane w podkatalogu tmp: zaleca tak by nie kasować jego
+Elementy te zostaną zapisane w podkatalogu tmp: zaleca się by nie kasować jego
 zawartości przed przebudową środowiska.  Skasowanie zawartości katalogu tmp
 spowoduje pobranie składników od początku i znacznie przedłuży czas budowania
 środowiska.
 W skład środowiska wchodzą lokalne serwery wirtualne:
 * `389ds.websso.linuxpolska.pl` - Serwer usługi katalowegj LDAP (realm uwierzytelnienia)
-* `cas.websso.linuxpolska.pl` - Serwer system SSO Apereo CAS
+* `cas.websso.linuxpolska.pl` - Serwer systemu SSO Apereo CAS
 * `appcas.websso.linuxpolska.pl` - Serwer aplikacji dla integracji z CAS
 * `keycloak.websso.linuxpolska.pl` - Serwer systemu SSO KeyCloak
 * `appkeycloak.websso.linuxpolska.pl` - Serwer aplikacji dla integracji z KeyCloak
 
-#### Przytane komendy do zarządania środowiskiem maszyn wirtuanym
+#### Przydatne komendy do zarządania środowiskiem maszyn wirtuanym
 Wykorzyztanie opcji <maszyna> jest opcjonalne w większości przydaków
 * `vagrant up <machine>`
 * `vagrant reload <machine>`
@@ -119,5 +125,5 @@ Niektóre logi będą wymagały zalogowani na konto roota lub dostępu przez sud
 * `sudo tail -50 /var/log/syslog`
 * `tail -50 ~/VirtualBox\ VMs/<machine>/Logs/VBox.log`
 
-#### Hasło rota
+#### Hasło rota dla wszystkich maszyn wirtualnych
 `vagrant`

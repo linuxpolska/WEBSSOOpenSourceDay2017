@@ -1,0 +1,40 @@
+[General]
+FullMachineName = 389ds.websso.linuxpolska.pl
+ServerRoot = /usr/lib64/dirsrv
+SuiteSpotGroup = ldap
+SuiteSpotUserID = ldap
+ConfigDirectoryAdminID= admin
+ConfigDirectoryAdminPwd= admin
+ConfigDirectoryLdapURL= ldap://ldap.websso.linuxpolska.pl:389/o=NetscapeRoot
+[slapd]
+AddOrgEntries = Yes
+AddSampleEntries = No
+HashedRootDNPwd = {SSHA}dg5WyimqZuwf/p72+OQQavyDU4HB5KHpBe5EIA==
+InstallLdifFile = suggest
+RootDN = cn=Directory Manager
+RootDNPwd = ldapsecret
+ServerIdentifier = ldap
+ServerPort = 389
+Suffix = dc=linuxpolska,dc=pl
+bak_dir = /var/lib/dirsrv/slapd-ldap/bak
+bindir = /usr/bin
+cert_dir = /etc/dirsrv/slapd-ldap
+config_dir = /etc/dirsrv/slapd-ldap
+datadir = /usr/share
+db_dir = /var/lib/dirsrv/slapd-ldap/db
+ds_bename = userRoot
+inst_dir = /usr/lib64/dirsrv/slapd-ldap
+ldif_dir = /var/lib/dirsrv/slapd-ldap/ldif
+localstatedir = /var
+lock_dir = /var/lock/dirsrv/slapd-ldap
+log_dir = /var/log/dirsrv/slapd-ldap
+naming_value = warta
+run_dir = /var/run/dirsrv
+sbindir = /usr/sbin
+schema_dir = /etc/dirsrv/slapd-ldap/schema
+sysconfdir = /etc
+tmp_dir = /tmp
+[admin]
+Port= 9830
+ServerAdminID= admin
+ServerAdminPwd= admin

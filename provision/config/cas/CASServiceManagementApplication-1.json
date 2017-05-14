@@ -1,0 +1,56 @@
+{
+  @class: org.apereo.cas.services.RegexRegisteredService
+  serviceId: ^https://cas.websso.linuxpolska.pl/cas-management/.*
+  name: CAS Service Management Application
+  id: 1
+  description: CAS Service Management Application
+  evaluationOrder: 0
+  logoutType: BACK_CHANNEL
+  attributeReleasePolicy:
+  {
+    @class: org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy
+    principalAttributesRepository:
+    {
+      @class: org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository
+      expiration: 2
+      timeUnit: HOURS
+    }
+    authorizedToReleaseCredentialPassword: false
+    authorizedToReleaseProxyGrantingTicket: false
+    allowedAttributes:
+    [
+      java.util.ArrayList
+      [
+        cn
+        mail
+        sn
+        memberOf
+      ]
+    ]
+  }
+  multifactorPolicy:
+  {
+    @class: org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy
+    failureMode: CLOSED
+  }
+  logoutUrl: https://cas.websso.linuxpolska.pl/cas-management
+  accessStrategy:
+  {
+    @class: org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy
+    enabled: true
+    ssoEnabled: true
+    requireAllAttributes: true
+    requiredAttributes:
+    {
+      @class: java.util.HashMap
+      memberOf:
+      [
+        java.util.HashSet
+        [
+          cn=admins,ou=groups,dc=linuxpolska,dc=pl
+        ]
+      ]
+    }
+    caseInsensitive: false
+  }
+}

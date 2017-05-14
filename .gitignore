@@ -1,0 +1,7 @@
+.vagrant/*
+tmp/*
+!tmp/.gitkeep
+!tmp/openid-connect-plugin.lpkg
+*~
+.project
+.DS_Store

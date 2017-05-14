@@ -1,0 +1,48 @@
+: Common
+TARGET=/vagrant/tmp         # cached files are stored here (directory on vagrant machines)
+
+: EPEL
+EPEL_VERSION=7-9            # epel repo version
+EPEL_URL=http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-${EPEL_VERSION}.noarch.rpm    # epel release rpm download url
+EPEL_TARGET=$TARGET         # cached files are stored here (directory on vagrant machines)
+
+: JDK
+JDK_VERSION=8u121           # java version
+JDK_BUILD=b13               # build (should probably not change)
+JDK_BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/${JDK_VERSION}-${JDK_BUILD}/e9e7ea248e2c4826b92b3f075a80e441/jdk-${JDK_VERSION}    # java download url
+JDK_VERSION=$(echo $JDK_BASE_URL_8 | rev | cut -d "/" -f1 | rev)    # human-readable version, don't change
+JDK_PLATFORM=-linux-x64.rpm # platform - if you use vagrant, you're good
+JDK_TARGET=$TARGET          # cached files are stored here (directory on vagrant machines)
+
+: CAS
+CAS_VERSION=5.0             # cas version
+CAS_URL=https://github.com/apereo/cas-overlay-template # cas download url (git repo)
+CAS_BUILDDIR=/tmp           # where cas in built (directory on vagrant machines)
+CAS_TARGET=$TARGET/auth.war    # cached files are stored here (filename on vagrant machines)
+CAS_SERVICE_MGMNT_URL=https://github.com/apereo/cas-services-management-overlay # cas services mngm url (git repo)
+CAS_SERVICE_MGMNT_TARGET=$TARGET/cas-management.war # cached files are stored here (filename on vagrant machines)
+
+: Tomcat
+TOMCAT_VERSION=8.5.14     # tomcat version as close to client version as possible
+TOMCAT_URL=http://ftp.piotrkosoft.net/pub/mirrors/ftp.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz    # tomcat download url
+TOMCAT_DIR=/opt             # where tomcat is installed
+TOMCAT_TARGET=$TARGET       # cached files are stored here (directory on vagrant machines)
+
+: KeyKloak
+KEYCLOAK_VERSION=3.0.0.Final
+KEYCLOAK_URL=https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-${KEYCLOAK_VERSION}.tar.gz   # tomcat download url
+KEYCLOAK_DIR=/opt             # where KEYCLOAK is installed
+KEYCLOAK_TARGET=$TARGET       # cached files are stored here (directory on vagrant machines)
+
+: Applications
+APP_NAMES='wordpress liferay'
+: Wordpress SAML Plugin
+WORDPRESS_SAML_URL=https://downloads.wordpress.org/plugin/onelogin-saml-sso.zip
+: Wordpress CAS plugin
+WORDPRESS_CAS_URL=https://downloads.wordpress.org/plugin/wp-cassify.2.0.4.zip
+: LifreRay Portal CE
+LIFERAY_MAJOR_VERSION=7.0.2%20GA3
+LIFERAY_MINOR_VERSION=7.0-ga3-20160804222206210
+LIFERAY_URL="https://freefr.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip"
+LIFERAY_DIR=/opt/liferay-ce-portal-7.0-ga3
+LIFERAY_TARGET=$TARGET

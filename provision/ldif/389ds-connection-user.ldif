@@ -1,0 +1,6 @@
+dn: uid=connectionagent,dc=linuxpolska,dc=pl
+changetype: add
+objectclass: account
+objectclass: simplesecurityobject
+uid: connectionagent
+userPassword: SSO@g3nt

@@ -1,0 +1,111 @@
+{
+    "nodes": {
+    "389ds.websso.linuxpolska.pl": {
+      ":alias": "ldap.websso.linuxpolska.pl",
+      ":ip": "172.18.18.10",
+      "ports": [],
+      ":memory": 512,
+      ":box": "bento/centos-7.2",
+      ":post_up_message": [
+        "******************* Informacje o serwerze LDAP **************************",
+        "Aby uzyskac dostep do uslugi katalogowej wykorzystaj adresy:",
+        "ldap://ldap.websso.linuxpolska.pl:389 lub",
+        "ldaps://ldap.websso.linuxpolska.pl:636",
+        "Jesli chcesz zarzadzac usluga wykorzystaj konto:",
+        "cn=Directory Manager' z  haslem: ldapsecret",
+        "Aby zarzadzac globalna konfiguracja poprzez 389-console wykorzystaj dane:",
+        "user: uid=admin,ou=administrators,ou=topologymanagement,o=netscaperoot",
+        "haslo: admin",
+        "url administracyjny: http://389ds.websso.linuxpolska.pl:9830",
+        "************************************************************************"
+      ]
+    },
+    "appkeycloak.websso.linuxpolska.pl": {
+      ":ip": "172.18.18.40",
+      "ports": [],
+      ":memory": 1024,
+      ":box": "bento/centos-7.2",
+      ":storage": false,
+      ":gluster": false,
+      ":post_up_message": [
+        "****** Informacje dla serwera aplikacji do integracji z KeyCloak **************",
+        "Aby wyswietlic liste aplikacji wprowadz adres:",
+        "https://appkeycloak.websso.linuxpolska.pl",
+        "Aby uzyskac dostep do aplikacji Wordpress wprowadz adres:",
+        "https://appkeycloak.linuxpolska.pl/wordpress/wp-admin",
+        "Wykorzystaj uzytkownika: admin, z haslem: admin, aby zalogowac sie do aplikacji",
+        "Aby uzyskac dostep do aplikacji Liferay wprowadz adres: ",
+        "https://appkeycloak.websso.linuxpolska.pl/liferay",
+        "wykorzystaj uzytkownika: admin, z haslem admin aby zalogowac sie do apliacji",
+        "*******************************************************************************"
+      ]
+    },
+    "appcas.websso.linuxpolska.pl": {
+      ":ip": "172.18.18.70",
+      "ports": [],
+      ":memory": 1024,
+      ":box": "bento/centos-7.2",
+      ":storage": false,
+      ":gluster": false,
+      ":post_up_message": [
+        "****** Informacje dla serwera aplikacji do integracji z CAS *******************",
+        "Aby wyswietlic liste aplikacji wprowadz adres:",
+        "https://appcas.websso.linuxpolska.pl",
+        "Aby uzyskac dostep do aplikacji Wordpress wprowadz adres:",
+        "https://appcas.linuxpolska.pl/wordpress/wp-admin",
+        "Wykorzystaj uzytkownika: admin, z haslem: admin, aby zalogowac sie do aplikacji",
+        "Aby uzyskac dostep do aplikacji Liferay wprowadz adres: ",
+        "https://appcas.websso.linuxpolska.pl/liferay",
+        "wykorzystaj uzytkownika: admin, z haslem admin aby zalogowac sie do apliacji",
+        "*******************************************************************************"
+      ]
+    },
+    "keycloak.websso.linuxpolska.pl": {
+      ":ip": "172.18.18.20",
+      "ports": [],
+      ":memory": 512,
+      ":box": "bento/centos-7.2",
+      ":storage": false,
+      ":gluster": false,
+      ":post_up_message": [
+        "**************** Informacje o serwerze KeyCloak ***************************",
+        "Aby uzyskac dostep bezposredni do systemu KeaCloak uzyj adresu:",
+        "https://keycloak.websso.linuxpolska.pl/auth",
+        "Wykorzystaj uzytkownika: admin z haslem: admin",
+        "Aby uzyskac dostep do strony zarzadzania serwerem aplikacji uzyj adresu:",
+        "https://keycloak.websso.linuxpolska.pl:4993",
+        "Aby zarzadzac serwerem wykorzystaj dane:",
+        "uzytkownik: admin z haslem: admin",
+        "*************************************************************************"
+      ]
+    },
+    "cas.websso.linuxpolska.pl": {
+      ":ip": "172.18.18.30",
+      "ports": [],
+      ":memory": 768,
+      ":box": "bento/centos-7.2",
+      ":storage": false,
+      ":gluster": false,
+      ":post_up_message": [
+        "********************** Informacje o serwerze CAS ***************************",
+        "Aby uzyskac dostep do strony logowania CAS wykorzystaj adres:",
+        "https://cas.websso.linuxpolska.pl/auth",
+        "Aby uzyskac dostep do strony statusu CAS wykorzystaj adres:",
+        "https://cas.websso.linuxpolska.pl/auth/status",
+        "Aby uzyskac dostep do strony zarzadzania konfiguracja CAS wykorzystaj adres:",
+        "https://cas.websso.linuxpolska.pl/auth/status/dashboard",
+        "Aby uzyskac dostep do strony zarzadznia lista serwisow CAS wykorzystaj adres:",
+        "https://cas.websso.linuxpolska.pl/cas-management",
+        "Aby uzyskac dostep do strony zarzadzania serwerem Tomcat wykorzystaj adres:",
+        "https://cas.websso.linuxpolska.pl/menager",
+        "Aby uzyskac dostep do strony zarzadzania host-manager serwera Tomcat wpisz:",
+        "https://cas.websso.linuxpolska.pl/host-manager",
+        "Aby uzyskac dostep do witryny prezentujacej status serwera Tomcat wpisz:",
+        "https://cas.websso.linuxpolska.pl/manager/status",
+        "Witryny zarzadzania serwerem Tomcat wymagaja zalogowania na dane:",
+        "uzytkownik: admin i haslo: admin",
+        "*************************************************************************"
+      ]
+    }
+  }
+}
