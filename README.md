@@ -89,7 +89,7 @@ Optymalizacji należy doknać przed wstępną konfiguracją środowiska.
 W tym celu po sklonowaniu śrowiska pracy systemu należy poddać edycji plik
 node.json i dwukrotnie zwiększyć parametr: ":memory":  dla wszystkich maszyn
 wirtualnych:
-sh```
+```sh
 np.: z 512 do 1024
 ```
 Zapewni to szybszą pracę całości środiwska (szybrszą inicjalizację aplikacji).
