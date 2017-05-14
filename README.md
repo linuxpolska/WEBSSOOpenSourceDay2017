@@ -62,7 +62,7 @@ Spowoduje to wstępną konfigurację środowiska dla wszystkich maszyn wirtualny
 Osoby wyposażone w komputery o ilości pamięci RAM nie przekraczającej 8GB
 powinny zbudować środowisko poprzez wydanie komend:
 ```sh
-vagrant 389ds.websso.linuxpolska.pl cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
+vagrant up 389ds.websso.linuxpolska.pl cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
 ```
 Po zakończeniu budowy środowiska 3 pierwszych maszyn należy zamknąć 2 z nich
 i dokonać zbudowania pozostałych maszyn wydając komendy:
@@ -94,7 +94,7 @@ np.: z 512 do 1024
 ```
 Zapewni to szybszą pracę całości środiwska (szybrszą inicjalizację aplikacji).
 Jeśli optymalizacji dokonano po wstępnym zbudowaniu środowiska (wydaniu komendy vagrant up)
-można dokonać ponownej budowy środowiska poprzez wydanie komendy:
+można dokonać ponownej budowy środowiska poprzez wydanie komend:
 ```sh
 vagrant destroy
 vagrant up
