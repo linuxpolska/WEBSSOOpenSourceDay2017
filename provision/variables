@@ -23,7 +23,7 @@ CAS_SERVICE_MGMNT_URL=https://github.com/apereo/cas-services-management-overlay 
 CAS_SERVICE_MGMNT_TARGET=$TARGET/cas-management.war # cached files are stored here (filename on vagrant machines)
 
 : Tomcat
-TOMCAT_VERSION=8.5.14     # tomcat version as close to client version as possible
+TOMCAT_VERSION=8.5.15     # tomcat version as close to client version as possible
 TOMCAT_URL=http://ftp.piotrkosoft.net/pub/mirrors/ftp.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz    # tomcat download url
 TOMCAT_DIR=/opt             # where tomcat is installed
 TOMCAT_TARGET=$TARGET       # cached files are stored here (directory on vagrant machines)
