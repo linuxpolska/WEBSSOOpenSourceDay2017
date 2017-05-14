@@ -46,7 +46,6 @@ wydając poniższ komendy:
 
 ```sh
 vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-reload
 vagrant plugin install vagrant-timezone
 ```
