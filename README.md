@@ -77,6 +77,28 @@ vagrant up keycloak.websso.linuxpolska.pl appkeycloak.websso.linuxpolska.pl
 Należy pamiętać, że uruchomienie środowiska po jego uprzednim zbudowaniu
 zajmie znacząco mniej czasu.
 
+##### Testowanie poprawności instalacji środowiska
+
+W celu przetestowania poprwaności instalacji środowiska należy sprawdzić czy wszystkie
+jego znaczące składniki wywołują się w przegląderce, w tym celu po zbudowaniu środowiska
+wprowadź w przeglądarce wszystkie podane poniżej adresy:
+Uwaga!!! Środowisko posiada certyfikaty typu self signed wymagające ich akceptacji w przeglądarce:
+Jako alternatywę dla akceptacji każdego certyfikatu z osobna można zaimportować do przeglądarki
+certyfikaty z podkatalogu **tmp** (wszystkie pliki zakończone rozszeżeniem *crt*)
+**Witryny do sprawdzenia:**
+* https://cas.websso.linuxpolska.pl/auth - Strona logowania Apereo CAS
+* https://cas.websso.linuxpolska.pl/auth/status/dashboard - Strona logowania do strony zarządzania CAS
+* https://cas.websso.linuxpolska.pl/cas-management - Strona logowania do systemu zarządzania serwisami CAS
+* https://appcas.websso.linuxpolska.pl/wordpress - Strona systemu Wordpress via CAS
+* https://appcas.websso.linuxpolska.pl/liferay - Strona portalu Liferay via CAS
+* https://keycloak.websso.linuxpolska.pl - Strona główna serwera KeyCloak
+* https://appkeycloak.websso.linuxpolska.pl/wordpress - Strona systemu Wordpress via KeyCloak
+* https://appkeycloak.websso.linuxpolska.pl/liferay - Strona systemu Liferay via KeyCloak
+
+W przypadku wystąpienia problemów z instalacją prosimy o zgłaszanie błedów korzystając z funkcji ISSUES.
+Przed zgłoszniem zachęcamy do sprawdzenia czy aktualizacja składników (VirtualBox, Vagrant) do najnnowszych wersji
+nie spowoduje zniknięcia problemów.
+
 ##### Scenariusze sukcesu
 
 Potwierdzono pełną poprawną instlację środowiska w następującyh systemach:
@@ -85,7 +107,6 @@ Potwierdzono pełną poprawną instlację środowiska w następującyh systemac
 * Linux Mint 18.1, Vagrant 1.9.4 (wymagał ręcznej aktualizacji), VirtualBox 5.0.36 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
 * Windows 10, Vagrant 1.8.6, VirtualBox 5.1.10 (proces instalacji wymaga potwierdzania podwyższania uprawnień w trakcie budowy każdej z maszyn - dopisywanie wpisów do lokalnego systemu wyszukiwania nazw)
 * LinuxMint 18.1 ,Vagrant 1.9.3 , VirtualBox 5.1.20 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
-
 
 #### Optymalizacja pracy środowiska
 
