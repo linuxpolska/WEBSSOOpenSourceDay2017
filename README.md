@@ -82,6 +82,7 @@ zajmie znacząco mniej czasu.
 Potwierdzono pełną poprawną instlację środowiska w następującyh systemach:
 * Fedora Linux 25:, Vagrant: 1.8.5, VirtualBox 5.1.22
 * Gentoo Linux Base System Relaease 2.3, Vagrant 1.9.3, VirtualBox 5.1.22
+* Linux Mint 18.1, Vagrant 1.9.4 (wymagał ręcznej aktualizacji), VirtualBox 5.0.36
 
 #### Optymalizacja pracy środowiska
 
