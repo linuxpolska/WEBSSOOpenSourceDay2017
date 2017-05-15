@@ -84,7 +84,7 @@ jego znaczące składniki wywołują się w przegląderce, w tym celu po zbudowa
 wprowadź w przeglądarce wszystkie podane poniżej adresy:
 Uwaga!!! Środowisko posiada certyfikaty typu self signed wymagające ich akceptacji w przeglądarce:
 Jako alternatywę dla akceptacji każdego certyfikatu z osobna można zaimportować do przeglądarki
-certyfikaty z podkatalogu **tmp** (wszystkie pliki zakończone rozszeżeniem *crt*)
+certyfikaty z podkatalogu **tmp** (wszystkie pliki zakończone rozszeżeniem *crt*).
 **Witryny do sprawdzenia:**
 * https://cas.websso.linuxpolska.pl/auth - Strona logowania Apereo CAS
 * https://cas.websso.linuxpolska.pl/auth/status/dashboard - Strona logowania do strony zarządzania CAS
@@ -96,7 +96,7 @@ certyfikaty z podkatalogu **tmp** (wszystkie pliki zakończone rozszeżeniem *cr
 * https://appkeycloak.websso.linuxpolska.pl/liferay - Strona systemu Liferay via KeyCloak
 
 W przypadku wystąpienia problemów z instalacją prosimy o zgłaszanie błedów korzystając z funkcji ISSUES.
-Przed zgłoszniem zachęcamy do sprawdzenia czy aktualizacja składników (VirtualBox, Vagrant) do najnnowszych wersji
+Przed zgłoszniem zachęcamy do sprawdzenia czy aktualizacja składników (VirtualBox, Vagrant) do najnowszych wersji
 nie spowoduje zniknięcia problemów.
 
 ##### Scenariusze sukcesu
