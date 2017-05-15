@@ -23,7 +23,7 @@
     "appkeycloak.websso.linuxpolska.pl": {
       ":ip": "172.18.18.40",
       "ports": [],
-      ":memory": 1024,
+      ":memory": 1536,
       ":box": "bento/centos-7.2",
       ":storage": false,
       ":gluster": false,
@@ -43,7 +43,7 @@
     "appcas.websso.linuxpolska.pl": {
       ":ip": "172.18.18.70",
       "ports": [],
-      ":memory": 1024,
+      ":memory": 1536,
       ":box": "bento/centos-7.2",
       ":storage": false,
       ":gluster": false,
