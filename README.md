@@ -68,7 +68,7 @@ vagrant up 389ds.websso.linuxpolska.pl cas.websso.linuxpolska.pl appcas.websso.l
 ```
 Po zakończeniu budowy środowiska 3 pierwszych maszyn należy zamknąć 2 z nich
 i dokonać zbudowania pozostałych maszyn wydając komendy:
-(potwierdzając komendy poprzez Y):
+(potwierdzając wykonanie komend poprzez Y):
 ```sh
 vagrant halt cas.websso.linuxpolska.pl appcas.websso.linuxpolska.pl
 vagrant up keycloak.websso.linuxpolska.pl appkeycloak.websso.linuxpolska.pl
@@ -80,14 +80,17 @@ zajmie znacząco mniej czasu.
 ##### Scenariusze sukcesu
 
 Potwierdzono pełną poprawną instlację środowiska w następującyh systemach:
-* Fedora Linux 25:, Vagrant: 1.8.5, VirtualBox 5.1.22
-* Gentoo Linux Base System Relaease 2.3, Vagrant 1.9.3, VirtualBox 5.1.22
-* Linux Mint 18.1, Vagrant 1.9.4 (wymagał ręcznej aktualizacji), VirtualBox 5.0.36
+* Fedora Linux 25, Vagrant: 1.8.5, VirtualBox 5.1.22 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+* Gentoo Linux Base System Relaease 2.3, Vagrant 1.9.3, VirtualBox 5.1.22 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+* Linux Mint 18.1, Vagrant 1.9.4 (wymagał ręcznej aktualizacji), VirtualBox 5.0.36 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+* Windows 10, Vagrant 1.8.6, VirtualBox 5.1.10 (proces instalacji wymaga potwierdzania podwyższania uprawnień w trakcie budowy każdej z maszyn - dopisywanie wpisów do lokalnego systemu wyszukiwania nazw)
+* LinuxMint 18.1 ,Vagrant 1.9.3 , VirtualBox 5.1.20 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+
 
 #### Optymalizacja pracy środowiska
 
 Osoby posiadające systemy wyposażone w ilość Ramu przekraczając 8GB zachęca się 
-do optymalizacji środowisak pracy poprzez zwiększenie parametrów pracy systemów.
+do optymalizacji środowiska pracy poprzez zwiększenie parametrów pracy systemów.
 Optymalizacji należy doknać przed wstępną konfiguracją środowiska.  
 W tym celu po sklonowaniu śrowiska pracy systemu należy poddać edycji plik
 node.json i dwukrotnie zwiększyć parametr: ":memory":  dla wszystkich maszyn

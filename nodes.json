@@ -97,7 +97,7 @@
         "Aby uzyskac dostep do strony zarzadznia lista serwisow CAS wykorzystaj adres:",
         "https://cas.websso.linuxpolska.pl/cas-management",
         "Aby uzyskac dostep do strony zarzadzania serwerem Tomcat wykorzystaj adres:",
-        "https://cas.websso.linuxpolska.pl/menager",
+        "https://cas.websso.linuxpolska.pl/manager",
         "Aby uzyskac dostep do strony zarzadzania host-manager serwera Tomcat wpisz:",
         "https://cas.websso.linuxpolska.pl/host-manager",
         "Aby uzyskac dostep do witryny prezentujacej status serwera Tomcat wpisz:",
