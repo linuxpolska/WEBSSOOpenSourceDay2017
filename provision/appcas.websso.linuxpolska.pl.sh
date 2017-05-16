@@ -229,7 +229,7 @@ PORTALINIT
 
 : Make cas certifcate trusted by java vm
 if [ ! -f /vagrant/tmp/cas.crt ] || [ ! -f /vagrant/tmp/cas.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-apache-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-apache-certs.sh cas.websso.linuxpolska.pl
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh cas.websso.linuxpolska.pl
 fi
 [ -f /vagrant/tmp/cas.crt ] && keytool -import -alias cas -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/cas.crt -storepass changeit -noprompt
 
