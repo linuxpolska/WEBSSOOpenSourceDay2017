@@ -107,6 +107,7 @@ Potwierdzono pełną poprawną instlację środowiska w następującyh systemac
 * Linux Mint 18.1, Vagrant 1.9.4 (wymagał ręcznej aktualizacji), VirtualBox 5.0.36 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
 * Windows 10, Vagrant 1.8.6, VirtualBox 5.1.10 (proces instalacji wymaga potwierdzania podwyższania uprawnień w trakcie budowy każdej z maszyn - dopisywanie wpisów do lokalnego systemu wyszukiwania nazw)
 * LinuxMint 18.1 ,Vagrant 1.9.3 , VirtualBox 5.1.20 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+* Debian 9.0 Parrot, Vagrant 1.9.5, VirtualBox 5.1.18 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
 
 #### Optymalizacja pracy środowiska
 
