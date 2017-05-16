@@ -127,7 +127,7 @@ WantedBy=multi-user.target
 EOF
 
 : Generate and copy tls certificate
-[ -f /vagrant/provision/bootstrap-node-rhel-keycloak-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-keycloak-certs.sh
+[ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh keycloak.websso.linuxpolska.pl
 [ -f /vagrant/tmp/keycloak.jks ] && cp /vagrant/tmp/keycloak.jks /opt/keycloak/standalone/configuration/
 [ -f /opt/keycloak/standalone/configuration/keycloak.jks ] && chown keycloak:keycloak /opt/keycloak/standalone/configuration/keycloak.jks
 

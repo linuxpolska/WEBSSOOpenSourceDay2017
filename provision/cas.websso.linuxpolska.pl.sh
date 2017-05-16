@@ -194,7 +194,7 @@ fi
 keytool -import -alias appcas -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/appcas.crt -storepass changeit -noprompt
 
 if [ ! -f /vagrant/tmp/keycloak.crt ] || [ ! -f /vagrant/tmp/keycloak.key ] ; then
-  [ -f /vagrant/provision/bootstrap-node-rhel-keycloak-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-keycloak-certs.sh
+  [ -f /vagrant/provision/bootstrap-node-rhel-certs.sh ] && source /vagrant/provision/bootstrap-node-rhel-certs.sh keycloak.websso.linuxpolska.pl
 fi
 keytool -import -alias keycloak -keystore /opt/java/jre/lib/security/cacerts -file /vagrant/tmp/keycloak.crt -storepass changeit -noprompt
 
