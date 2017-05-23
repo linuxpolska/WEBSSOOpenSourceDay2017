@@ -7,8 +7,8 @@ EPEL_URL=http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-${EPEL_VER
 EPEL_TARGET=$TARGET         # cached files are stored here (directory on vagrant machines)
 
 : JDK
-JDK_VERSION=8u121           # java version
-JDK_BUILD=b13               # build (should probably not change)
+JDK_VERSION=8u131           # java version
+JDK_BUILD=b11               # build (should probably not change)
 JDK_BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/${JDK_VERSION}-${JDK_BUILD}/e9e7ea248e2c4826b92b3f075a80e441/jdk-${JDK_VERSION}    # java download url
 JDK_VERSION=$(echo $JDK_BASE_URL_8 | rev | cut -d "/" -f1 | rev)    # human-readable version, don't change
 JDK_PLATFORM=-linux-x64.rpm # platform - if you use vagrant, you're good
