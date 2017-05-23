@@ -8,10 +8,11 @@ Jeśli otrzymywałeś/aś błąd:
 ```sh
 set: usage: set [-abefhkmnptuvxBCHP] [-o option -name] [--] [arg ...]
 This SSH command responded with a non-zero exit status. Vagrant
-assumes that this means the command faild. The output for this command should be
+assumes that this means the command failed. The output for this command should be
 in the log above. Please read the output to determine what went wrong.
 ```
-Poprawka została wgrana do repozytorium, aby usunać problem wykonaj w linii polececeń poniższe komendy:
+Poprawka została wgrana do repozytorium.
+Aby usunać problem po wejściu do katalogu z lokalną zawartością repozytorium wykonaj w linii polececeń poniższe komendy:
 ```sh
 vagrant destroy -f
 git fetch --all
