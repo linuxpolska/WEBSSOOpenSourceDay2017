@@ -3,15 +3,28 @@
 To jest repozytorium przechowujące konfigurację środowiska warsztatowego
 na potrzeby warsztatów WEBSSO prowadzonych w trakcie Open Source Day 2017
 
-#### Bardzo Ważne!!!
-
-Środowisko powinno zostać sklonowane i zainstalowane co najmniej 24 przed
-rozpoczęciem warsztatów. Środowisko składa się ze składników, których
-automatyczne pobranie i instalacja oraz wstępna konfiguracja zajmuje zdecydowanie
-więcej czasu niż sam czas trwania ćwiczeń przewidzianych do przeprowadzania na
-warsztatach. Serdecznie prosimy o nie ignorowanie tej informacji.
-Instrukcje dotyczące wstępnej instalacji i konfiguracji środowiska znajdują się
-poniżej.
+#### Dotyczy osób, które miały problem z konfiguracją środowiska na Windowsie
+Jeśli otrzymywałeś/aś błąd:
+```sh
+set: usage: set [-abefhkmnptuvxBCHP] [-o option -name] [--] [arg ...]
+This SSH command responded with a non-zero exit status. Vagrant
+assumes that this means the command faild. The output for this command should be
+in the log above. Please read the output to determine what went wrong.
+```
+Poprawka została wgrana do repozytorium, aby usunać problem wykonaj w linii polececeń poniższe komendy:
+```sh
+vagrant destroy -f
+git fetch --all
+git reset --hard origin/master
+git pull -f origin master
+```
+Problem był spowodowany domyślną konfiguracją klienta Git pod Windows. Domyślna konfiguracja dokonuje konwersji
+znaków końca linii podczas pobierania plików z repozytorium. Zmiany te powodowały nie wykonywanie się skryptów
+na maszynach wirtualnych i niszczyły de fakto pliki konfiguracyjne. Do repozytorium wgrano poprawkę, która powoduje
+blokowanie tej funkcji dla wszystkich plików. Powyższe komendy wymuszają ponowne pobranie wszystkich plików w repozytorium
+tym razem w postaci nie zmienionej. Osoby, które sklonowały repozytorium przed wgraniem do niego poprawki
+ powinny wykonać te komendy, osoby które nie klonowały jeszcze repozytorium nie muszą wystarczy, że sklonują repozytorium.
+ Konwersja już nie powinna następować bez względu na to jak skonfigurowany jest klient Git.
 
 #### Wymagania minimalne środowiska
 
@@ -20,6 +33,7 @@ pozwoli na uruchomienie obok siebie 3 jednocześnie pracujących maszyn wirtualn
 o łącznej ilości pamięci ram poniżej 2.5 GB. Powinno to zapewnić poprawną pracę
 środowiska na systemie fizycznym wyposażonym w 4GB pamięci RAM. Nie zaleca się 
 prób instalacji środowiska na systemach wyposżonych w mniejszą ilośc pamięci RAM.
+Wymagany jest 64 bitowy system operacyjny i komputer z procesorem kompatybilnym z systemami CentOs 7.2.
 Więcej informacji dotyczących wydajności pracy środowiska można znaleźć w sekcji
  Optymalizacja pracy środowiska.
 
@@ -33,6 +47,7 @@ zainstalować na swoim komputerze następujące składniki oprogramowania:
 
 Zaleca się instalację wyżej wymienionych składników poprzez mechanizmy systemu
 operacyjnego z jakiego korzysta użytownik.
+
 
 Po zainstalowaniu składników należy dokonać sklonowania repozytorium git
 poprzez wydanie komendy:
@@ -108,6 +123,7 @@ Potwierdzono pełną poprawną instlację środowiska w następującyh systemac
 * Windows 10, Vagrant 1.8.6, VirtualBox 5.1.10 (proces instalacji wymaga potwierdzania podwyższania uprawnień w trakcie budowy każdej z maszyn - dopisywanie wpisów do lokalnego systemu wyszukiwania nazw)
 * LinuxMint 18.1 ,Vagrant 1.9.3 , VirtualBox 5.1.20 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
 * Debian 9.0 Parrot, Vagrant 1.9.5, VirtualBox 5.1.18 (dopisywania wpisów do /etc/hosts wymaga jednokrotnego podniesienia uprawnień - podania hasła)
+* Windows 7, Vagrant 1.9.5, VirtualBox 5.1.22 (proces instalacji wymaga potwierdzania podwyższania uprawnień w trakcie budowy każdej z maszyn - dopisywanie wpisów do lokalnego systemu wyszukiwania nazw)
 
 #### Optymalizacja pracy środowiska
 
